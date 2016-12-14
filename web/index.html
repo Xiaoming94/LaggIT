@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<title>LaggIT</title>
+	<link rel="stylesheet" type="text/css" href="main.css" />
+
+	<!-- include the T Bootstrap stylesheets -->
+	<link rel="stylesheet" href="packages/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="packages/bootstrap/css/bootstrap-theme.css">
+
+	<!-- include the T Bootstrap javascript -->
+	<script src="packages/bootstrap/jquery/jquery.js"></script>
+	<script src="packages/bootstrap/js/bootstrap.js"></script>
+
+	<!-- T Bootstrap mobile viewport fix, second one disables zooming too -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- For the dart VM engine -->
+	<script defer src="main.dart" type="application/dart"></script>
+
+	<!-- For Browsers without the dart VM engine -->
+	<script defer src="packages/browser/dart.js"></script>
+</head>
+<body>
+	<laggit-app>
+	</laggit-app>
+</body>
+</html>
