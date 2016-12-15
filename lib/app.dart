@@ -19,6 +19,6 @@ import 'dart:js' as js;
 
 class LaggIT implements AfterContentInit {
 	void ngAfterContentInit() {
-		js.context.callMethod(r'$', ['#fullpage']).callMethod('fullpage', []);
+		js.context.callMethod(r'$', ['#fullpage']).callMethod('fullpage', [new js.JsObject.jsify({'scrollingSpeed': 500})]);
 	}
 }
