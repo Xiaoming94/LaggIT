@@ -1,7 +1,7 @@
 
 import 'package:angular2/platform/browser.dart';
-import 'package:LaggIT/app_component.dart';
+import 'package:LaggIT/app.dart';
 
 void main() {
-	bootstrap(AppComponent);
+	bootstrap(LaggIT);
 }
