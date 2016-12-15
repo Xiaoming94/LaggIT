@@ -1,8 +1,9 @@
 import 'package:angular2/core.dart';
 import 'package:LaggIT/laggit_home/app.dart';
 import 'package:LaggIT/laggit_info/app.dart';
-import 'package:LaggIT/laggit_contact/app.dart';
 import 'package:LaggIT/laggit_booking/app.dart';
+import 'package:LaggIT/laggit_contact/app.dart';
+import 'package:LaggIT/laggit_login/app.dart';
 import 'dart:js' as js;
 
 @Component(
@@ -12,8 +13,9 @@ import 'dart:js' as js;
 	directives: const [
 		HomeModule,
 		InfoModule,
+		BookingModule,
 		ContactModule,
-		BookingModule
+		LoginModule
 	],
 )
 

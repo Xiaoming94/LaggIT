@@ -1,0 +1,15 @@
+<div class="row login-row">
+	<div class="col-md-2 col-md-offset-10 col-sm-3 col-sm-offset-9 col-xs-4 col-xs-offset-8">
+		<button class="btn btn-info btn-large" (click)="toggleLoginBox()">
+			<span class="glyphicon glyphicon-user"></span> Login
+		</button>
+	</div>
+</div>
+<div id="login-background" class="background background-hidden row" (click)="toggleLoginBox()">
+	<div id="login-dropdown" class="box box-hidden col-sm-6 col-sm-offset-3 unselectable" (click)="stopPropagation($event);">
+		<p>Blah blabh hbsbd</p>
+		<p>Username</p>
+		<p>--------</p>
+		<p>Password</p>
+	</div>
+</div>
