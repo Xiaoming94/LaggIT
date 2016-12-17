@@ -11,3 +11,7 @@
 	user-select: none;
 	cursor: default;
 }
+
+.center {
+	text-align: center;
+}
