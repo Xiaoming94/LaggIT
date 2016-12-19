@@ -26,5 +26,6 @@ func events(w http.ResponseWriter, r *http.Request) {
 			Place: "Hubben",
 		},
 	}
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	json.NewEncoder(w).Encode(events)
 }
