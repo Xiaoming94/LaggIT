@@ -5,6 +5,7 @@ import 'package:LaggIT/laggit_booking/app.dart';
 import 'package:LaggIT/laggit_contact/app.dart';
 import 'package:LaggIT/laggit_login/app.dart';
 import 'laggit_booking/event_service.dart';
+import 'package:LaggIT/browser_client.dart';
 import 'dart:js' as js;
 
 @Component(
@@ -18,7 +19,10 @@ import 'dart:js' as js;
     ContactModule,
     LoginModule
   ],
-  providers: const [EventService],
+  providers: const [
+    EventService,
+    const Provider(BrowserClient, useFactory: newBrowserClient)
+  ],
 )
 class LaggIT implements AfterContentInit {
   void ngAfterContentInit() {

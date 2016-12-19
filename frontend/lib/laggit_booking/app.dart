@@ -11,13 +11,16 @@ import 'event.dart';
 )
 class BookingModule implements OnInit {
   List<LEvent> events;
-
   final EventService _eventService;
 
   BookingModule(this._eventService);
 
   Future<Null> getEvents() async {
-    events = await _eventService.getEvents();
+    try {
+      events = await _eventService.getEvents();
+    } catch (e) {
+      errorMessage = e.toString();
+    }
   }
 
   @override
