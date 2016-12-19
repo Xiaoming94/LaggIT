@@ -3,6 +3,7 @@ import 'dart:html';
 import 'package:angular2/core.dart';
 import 'event_service.dart';
 import 'event.dart';
+import 'package:LaggIT/procced.dart';
 
 @Component(
   selector: 'laggit-booking',
@@ -11,9 +12,10 @@ import 'event.dart';
 )
 class BookingModule implements OnInit {
   List<LEvent> events;
+  final FullpageService _fullpageService;
   final EventService _eventService;
 
-  BookingModule(this._eventService);
+  BookingModule(this._eventService, this._fullpageService);
 
   Future<Null> getEvents() async {
     try {
@@ -25,6 +27,6 @@ class BookingModule implements OnInit {
 
   @override
   ngOnInit() {
-    getEvents();
+    _fullpageService.waitForMe(getEvents());
   }
 }
