@@ -3,7 +3,6 @@ import 'dart:html';
 import 'package:angular2/core.dart';
 import 'event.dart';
 import 'dart:convert';
-import 'package:http/browser_client.dart';
 import 'package:http/http.dart';
 
 @Injectable()
