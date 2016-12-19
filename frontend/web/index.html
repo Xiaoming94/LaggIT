@@ -31,5 +31,16 @@
 </head>
 <body class="life-universe-and-everything">
 	<laggit>Loading...</laggit>
+	<script type="text/javascript">
+		function loadFullpage() {
+			setTimeout(function(){
+				$('#fullpage').fullpage({
+					scrollingSpeed: 500,
+					slidesNavigation: true,
+				});
+				console.log('Loaded fullpage!');
+			}, 0);
+		}
+	</script>
 </body>
 </html>
