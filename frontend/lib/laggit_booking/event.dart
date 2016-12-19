@@ -7,6 +7,7 @@ class LEvent {
   int price;
   String info;
   ImageElement image;
+  bool is_open;
   LEvent(this.name);
   LEvent();
 }
