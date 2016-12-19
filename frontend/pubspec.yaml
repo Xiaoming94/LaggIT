@@ -6,10 +6,12 @@ environment:
 dependencies:
   angular2: ^2.0.0
   bootstrap:
+  dartson:
 dev_dependencies:
   browser: ^0.10.0
   dart_to_js_script_rewriter: ^1.0.1
 transformers:
+- dartson
 - angular2:
     platform_directives:
     - 'package:angular2/common.dart#COMMON_DIRECTIVES'

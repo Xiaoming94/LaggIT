@@ -1,4 +1,12 @@
+import 'dart:html';
+
 class LEvent {
-  String name;
+  String title;
+  DateTime time;
+  String place;
+  int price;
+  String info;
+  ImageElement image;
   LEvent(this.name);
+  LEvent();
 }
