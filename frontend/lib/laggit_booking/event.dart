@@ -2,7 +2,15 @@ import 'dart:html';
 
 int _toInt(i) => i is int ? i : int.parse(i);
 bool _toBool(i) => i is bool ? i : i.toLowerCase() == 'true';
-ImageElement _toImage(i) => ImageElement(i, Null, Null);
+ImageElement _toImage(i) {
+  try {
+    return ImageElement(i, Null, Null);
+  } catch (e) {
+    print(e);
+    return Null;
+  }
+}
+
 DateTime _toTime(i) => DateTime.parse(i);
 
 class LEvent {
