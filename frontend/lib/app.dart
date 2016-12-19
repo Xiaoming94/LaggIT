@@ -5,7 +5,6 @@ import 'package:LaggIT/laggit_booking/app.dart';
 import 'package:LaggIT/laggit_contact/app.dart';
 import 'package:LaggIT/laggit_login/app.dart';
 import 'laggit_booking/event_service.dart';
-import 'package:LaggIT/browser_client.dart';
 import 'package:LaggIT/procced.dart';
 
 @Component(
@@ -19,11 +18,7 @@ import 'package:LaggIT/procced.dart';
     ContactModule,
     LoginModule
   ],
-  providers: const [
-    EventService,
-    const Provider(BrowserClient, useFactory: newBrowserClient),
-    FullpageService
-  ],
+  providers: const [EventService, FullpageService],
 )
 class LaggIT implements AfterContentInit {
   final FullpageService _fullpageService;

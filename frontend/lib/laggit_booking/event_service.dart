@@ -9,14 +9,11 @@ import 'package:http/http.dart';
 @Injectable()
 class EventService {
   static const String _url = 'http://localhost:8082/events';
-  final BrowserClient _http;
-
-  EventService(this._http);
 
   //Future<List<LEvent>> getEvents() async => mockEvents;
   Future<List<LEvent>> getEvents() async {
     try {
-      final String response = await _http.get(_url);
+      final String response = await HttpRequest.getString(_url);
       final List<LEvent> events = _extractData(response)
           .map((value) => new LEvent.fromJson(value))
           .toList();
@@ -28,7 +25,7 @@ class EventService {
   }
 
   static String _extractData(Response res) {
-    var body = JSON.decode(res.body);
+    var body = JSON.decode(res);
     return body;
   }
 
